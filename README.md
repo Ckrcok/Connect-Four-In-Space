@@ -52,11 +52,11 @@ Project Goals Future -
 
 # Gameplay Screenshots -
 
-###Home Screen
+### Home Screen
 
 [![](https://i.imgur.com/kEyo9cI.png)](#)
 
-###Game Screen
+### Game Screen
 
 [![](https://i.imgur.com/e4nGV1t.png)](#)
 
