@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&display=swap");
+
+html {
+  align-self: center;
+  height: 100%;
+  max-height: 600px;
+  width: 100vw;
+  margin: 0;
+  background-image: url("assets/stars.png"), url("assets/spaceMan.png"), url(""),
+    url("assets/background.png"), linear-gradient(blue, black);
+  background-repeat: repeat-x, repeat-x, repeat-x, repeat-x, no-repeat;
+  background-position: 0 0px, 0 0%, 500px, 0, 0;
+  background-size: 1500px, 1000px, 150vw 150vh, 150vw 150vh, 1920px 1080px;
+  animation: 100s para infinite ease;
+}
+@keyframes para {
+  100% {
+    background-position: -5000px 30%, 1000px 95%, 0px 0%, 0px 0%, 0 0;
+  }
+}
+
+table {
+  align-self: center;
+  width: 280px;
+  height: 250px;
+  table-layout: fixed;
+  margin: 0;
+}
+
+td {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background-image: url("assets/board.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.timer {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.img {
+  width: 40px;
+  height: 40px;
+}
+
+.MusicImage {
+  display: flex;
+  width: 10px;
+  height: 10vh;
+}
+.grid-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.connect-four {
+  display: flex;
+  justify-content: center;
+  font-family: "Brush Script MT", cursive;
+  color: #ff0000;
+  font-size: 3.5vw;
+}
+.player-turn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+  width: 140px;
+  border: 2px red solid;
+}
+#turn-of {
+  padding-right: 10px;
+}
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10vh;
+}
+
+#buttonExit,
+#buttonMute,
+#buttonReset {
+  font-family: "Space Mono", monospace;
+  color: #ff0000;
+  text-decoration: none;
+  font-size: 2vw;
+  background: none;
+  border: 2px red solid;
+}
+
+#backgroundMusic {
+  background-image: url("https://i.ytimg.com/vi/9DCnb_5TtOE/maxresdefault.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  width: 15vw;
+  height: 15vh;
+  position: absolute;
+}
+
+@keyframes backgroundMusic {
+  0% {
+    background-image: url("https://i.ytimg.com/vi/9DCnb_5TtOE/maxresdefault.jpg");
+    background-size: 15vw 15vh;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    width: 15vw;
+    height: 15vh;
+  }
+  25% {
+    background-image: url("https://i.ytimg.com/vi/9DCnb_5TtOE/maxresdefault.jpg");
+    background-size: 25vw 25vh;
+    background-repeat: no-repeat;
+    background-color: yellow;
+    opacity: 0.8;
+    width: 25vw;
+    height: 25vh;
+  }
+
+  100% {
+    background-image: url("https://i.ytimg.com/vi/9DCnb_5TtOE/maxresdefault.jpg");
+    background-size: 40vw 60vh;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    background-color: red;
+    width: 40vw;
+    height: 60vh;
+  }
+}
+
+#backgroundMusic:hover {
+  background-color: #047dc5;
+  background-size: 40vw 60vh;
+  background-repeat: no-repeat;
+  opacity: 1;
+  width: 40vw;
+  height: 60vh;
+  animation-name: backgroundMusic;
+  animation-duration: 2s;
+}
+
+#start {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  /* background-image: url("https://i.ytimg.com/vi/9DCnb_5TtOE/maxresdefault.jpg"); */
+}
+
+footer {
+  text-align: center;
+
+  font-family: "Space Mono", monospace;
+  color: #ff0000;
+  font-size: 24px;
+}
+/*
+.grid-container {
+  display: grid;
+  display: grid;
+  grid-template-columns: 0.1fr 4.6fr 0.4fr 0.8fr;
+  grid-template-rows: 0.5fr 0.6fr 3.4fr 0.2fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "connect-four connect-four connect-four ."
+    "timer timer . buttons"
+    ". gameboard gameboard player-turn"
+    "footer footer footer footer";
+ }
+.connect-four {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . ."
+    ". . .";
+  grid-area: connect-four;
+  grid-area: connect-four;
+}
+.player-turn {
+display: grid;
+  grid-template-columns: 0.4fr 2.3fr 0.3fr;
+  grid-template-rows: 1.5fr 0.8fr 0.8fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . ."
+    ". turn-text ."
+    ". . .";
+  grid-area: player-turn;
+  grid-area: player-turn;
+
+  text-align: center;
+}
+@@ -56,12 +56,12 @@ html {
+  text-align: center;
+}
+.buttons {
+  display: grid;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: ". . .";
+  grid-area: buttons;
+  grid-area: buttons;
+
+}
+.timer {
+  grid-area: timer;
+@@ -72,15 +72,15 @@ html {
+  text-align: center;
+}
+.gameboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "insideboard insideboard insideboard"
+    "insideboard insideboard insideboard";
+  grid-area: gameboard;
+  background-image: url("assets/Board.png");
+  grid-area: gameboard;
+
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+
+#insideBoard{
+  display: grid;
+  grid-area: insideboard;
+}
+
+
+
+@@ -92,10 +92,15 @@ html {
+  font-size: 50px;
+  padding-top: 9px;
+  padding-bottom: 47px;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  background-image: url("assets/Board.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.img {
+  width: 0px;
+} */
+
+/* 114 x 75 */
+/*
+
+
+.td {
+  width: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+*/

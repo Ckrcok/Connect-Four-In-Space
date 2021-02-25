@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&display=swap");
+
+html {
+  font-family: "Brush Script MT" cursive;
+  height: 100%;
+  max-height: 600px;
+  width: 100vw;
+  margin-top: 2vh;
+  background-image: url("assets/stars.png"), url("assets/spaceMan.png"), url(""),
+    url("assets/background.png"), linear-gradient(blue, black);
+  background-repeat: repeat-x, repeat-x, repeat-x, repeat-x, no-repeat;
+  background-position: 0 0px, 0 0%, 500px, 0, 0;
+  background-size: 1500px, 1000px, 150vw 150vh, 200vw 200vh, 1920px 1080px;
+  animation: 100s para infinite ease;
+}
+@keyframes para {
+  100% {
+    background-position: -5000px 30%, 1000px 95%, 0px 0%, 0px 0%, 0 0;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#start {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+img {
+  align-self: center;
+  width: 70vw;
+  height: 45vh;
+}
+
+h1 > a {
+  font-family: "Brush Script MT", cursive;
+  color: #ff0000;
+  text-decoration: none;
+  font-size: 10vw;
+}
+
+button {
+  font-family: "Brush Script MT", cursive;
+  color: #ff0000;
+  text-decoration: none;
+  font-size: 10vw;
+  background: none;
+}
+
+footer {
+  margin-top: 5vh;
+  text-align: center;
+
+  font-family: "Space Mono", monospace;
+  color: #ff0000;
+  font-size: 20px;
+}
