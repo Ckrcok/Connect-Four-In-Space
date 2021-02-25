@@ -52,14 +52,12 @@ Project Goals Future -
 
 # Gameplay Screenshots -
 
-<p align="center">
 ###Home Screen
-</p>
+
 [![](https://i.imgur.com/kEyo9cI.png)](#)
 
-<p align="center">
 ###Game Screen
-</p>
+
 [![](https://i.imgur.com/e4nGV1t.png)](#)
 
 # FrameWire -
