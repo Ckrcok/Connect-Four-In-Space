@@ -54,13 +54,14 @@ Project Goals Future -
 
 <p align="center">
 ###Home Screen
-[![](https://i.imgur.com/kEyo9cI.png)](#)
 </p>
+[![](https://i.imgur.com/kEyo9cI.png)](#)
 
 <p align="center">
 ###Game Screen
-[![](https://i.imgur.com/e4nGV1t.png)](#)
 </p>
+[![](https://i.imgur.com/e4nGV1t.png)](#)
+
 # FrameWire -
 
 [![](https://raw.githubusercontent.com/Ckrcok/MyProjects/main/Connect%20Four/FrameWire.PNG)](#)
