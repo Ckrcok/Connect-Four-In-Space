@@ -97,7 +97,7 @@ function click(e) {
 }
 
 function exit(e) {
-  window.location.href = "Index.html";
+  window.location.href = "index.html";
 }
 
 function mute(e) {
