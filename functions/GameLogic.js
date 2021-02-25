@@ -43,6 +43,7 @@ buttonExit.addEventListener("click", exit);
 
 /*----- functions -----*/
 function init() {
+  // reset the board to starting state
   boardarray = [
     [0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0],
@@ -52,6 +53,8 @@ function init() {
     [0, 0, 0, 0, 0, 0, 0],
   ];
 
+  // give every td an id based on its index
+
   for (let i = 0; i < td.length; i++) {
     let col = i % 7;
     let row = Math.floor(i / 7);
@@ -60,15 +63,17 @@ function init() {
   }
 }
 
+// click function
 function click(e) {
+  // filer out the elemnts but only returns tag of TD
   let savedElement = e.composedPath().filter((target) => {
     console.log(typeof target);
     return target.tagName === "TD";
   });
-  console.log(savedElement);
 
+  // send it to function pushDown to push down the chips
   pushDown(savedElement);
-
+  //checking that we are only clicking on the td and not other places
   if (
     e.target.tagName === "TABLE" ||
     e.target.tagName === "TBODY" ||
@@ -77,10 +82,11 @@ function click(e) {
     return;
   }
 
-  console.log("Player " + playerTurn + " Clicked the " + e.target.id);
+  //save the id indexs
   let x = e.target.id[0];
   let y = e.target.id[1];
 
+  // player 1 places else player 2
   if (playerTurn == 1) {
     render(e);
     PlayerTurn.innerHTML = "<img class='img' src='./style/assets/Player2.png'>";
@@ -96,15 +102,18 @@ function click(e) {
   }
 }
 
+//exit button
 function exit(e) {
   window.location.href = "index.html";
 }
 
+//mute button
 function mute(e) {
   console.log("Mute");
   backgroundMusic.volume = 0;
 }
 
+// give every td an id based on its index
 for (let i = 0; i < td.length; i++) {
   let col = i % 7;
   let row = Math.floor(i / 7);
@@ -181,6 +190,7 @@ function isFour(boardarray) {
   return 0;
 }
 
+// if there is a winner if there is go to the winner page
 function isWinner(winner) {
   if (winner == 1) {
     window.location.href = "Player1Won.html";
@@ -191,11 +201,9 @@ function isWinner(winner) {
   }
 }
 
+// pushing down the chips
 function pushDown(savedElement) {
-  // let x = event.target.id[0];
   let y = savedElement[0].id.split("")[1];
-
-  console.log(y);
 
   for (i = 0; i < boardarray.length; i++) {
     if (boardarray[i][y] !== 0) {
@@ -214,8 +222,8 @@ function pushDown(savedElement) {
   }
 }
 
+//render the board
 function render(event) {
-  // setTimeout(render, 1000);
   for (r = 0; r < 6; r++) {
     for (c = 0; c < 7; c++) {
       if (event.target.tagName === "table") return;
@@ -230,34 +238,6 @@ function render(event) {
   }
 }
 
+//start the board and render
 init();
 render();
-
-////////////////////////////////////////////////////////////////////////////////////////////////
-// Aidan Way for the board
-// let board = [
-//   [0, 0, 0, 0, 0, 0, 0, 0],
-//   [0, 0, 1, 0, 0, 0, 0, 0],
-//   [0, 0, 0, 0, 0, 0, 0, 0],
-//   [0, 0, 0, 0, 0, 0, 0, 0],
-//   [0, 0, 0, 3, 0, 0, 0, 0],
-//   [0, 0, 0, 0, 0, 0, 0, 0],
-//   [0, 0, 0, 0, 0, 0, 0, 0],
-//   [0, 0, 2, 0, 0, 0, 1, 0],
-// ];
-// let DOMboard = document.getElementById("board");
-// board.forEach((r, index1) => {
-//   let row = document.createElement("div");
-//   row.className = "row";
-//   row.id = `r${x}`;
-//   r.forEach((c, index2) => {
-//     let cell = document.createElement("div");
-//     cell.className = "cell";
-//     cell.innerText = `c${x}${y}`;
-//     cell.id = `c${x}${y}`;
-//     console.log(cell);
-//     row.appendChild(cell);
-//   });
-//   DOMboard.appendChild(row);
-// });
-// function init() {}
