@@ -1,14 +1,17 @@
 # 🌌Connect - Four In Space!󠀠🌌
 
 <p align="center">
-  <a href="https://i.imgur.com/UtzC0VG.png">
+  <a href="https://ckrcok.github.io/Connect-Four-In-Space/">
     <img
       alt="connect-four Inspace"
       src="https://i.imgur.com/UtzC0VG.png"
       width="400"
     />
   </a>
+  <br/>
+  <h6 align="center" >Click On The Logo To Go To The Game</h6>
 </p>
+
 
 ##
 
