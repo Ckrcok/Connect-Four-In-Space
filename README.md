@@ -5,7 +5,7 @@
     <img
       alt="connect-four Inspace"
       src="https://i.imgur.com/UtzC0VG.png"
-      width="400"
+      width="800"
     />
   </a>
   <br/>
